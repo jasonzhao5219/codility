@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson 2 ForgJump</title>
+</head>
+<body>
+		
+<script type="text/javascript">
+	//Lession 2 - JumpFrog
+var X = 10;
+var Y = 85;
+var D = 30;
+function ForgJump(X,Y,D){
+   var counter = 0;
+ 	var mathOne = Math.floor((Y - X)/D); 
+  while(X<Y){
+		X = X + D;
+		counter = counter +1; 
+	}
+	return mathOne;
+
+}
+
+var frogOne = ForgJump(X,Y,D);
+console.log("result of ForgJump is : ",frogOne);
+
+</script>
+
+</body>
+</html>
