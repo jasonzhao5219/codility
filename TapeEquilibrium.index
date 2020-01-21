@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson 3 TapeEquilibrium</title>
+</head>
+<body>
+		
+<script type="text/javascript">
+//lession3 - 3 TapeEquilibrium
+
+var Arr = [1, 2, 3, 4, 2]; 
+function solution(A){
+	var sumLeft = 0;
+	var sumRight = 0;
+	var temp = 0;
+	var result = 100000000;
+	var P = 1;
+	var abs = 0;
+
+	//method one
+    
+		while(P<A.length){
+			console.log("now P is: ",P);
+			sumLeft = 0;
+			sumRight = 0;
+			for (i=0;i<P;i++){
+				sumLeft += A[i];
+				
+
+
+			}
+			console.log("leftsum is : ",sumLeft);
+			for (i=P;i<A.length;i++){
+				sumRight += A[i];
+
+			}
+			console.log("rightsum is : ",sumRight);
+			if(sumRight>=sumLeft){
+				temp = sumRight - sumLeft;
+			}
+			if(sumLeft>sumRight){		
+				temp = sumLeft - sumRight;
+			}
+			if (temp<result){
+				console.log("temp is : ",temp);
+				result = temp;
+				//resultOfP = P;
+			}
+			P++;
+
+		}
+	return result;
+		    
+   //method 2 : time complexity: O(n)
+    for(i=1;i<A.length;i++){
+    	sumRight += A[i];
+    }
+    sumLeft = A[0];
+    abs = Math.abs(sumRight - sumLeft);
+    for(i=1;i<A.length;i++){
+    	if (Math.abs(sumRight - sumLeft)<abs){
+    		abs = Math.abs(sumRight - sumLeft);
+    	}
+    	sumLeft+=A[i];
+    	sumRight-=A[i];
+
+    }
+    return abs;
+
+}
+
+var hello = solution(Arr);
+console.log("result is : ",hello);
+
+</script>
+
+</body>
+</html>
