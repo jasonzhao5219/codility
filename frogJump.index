@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lesson 2 ForgJump</title>
+	<title>Lession 3 - Time Complexity - JumpFrog</title>
 </head>
 <body>
-		
+	
 <script type="text/javascript">
-	//Lession 2 - JumpFrog
+	//Lession 3 - Time Complexity - JumpFrog
 var X = 10;
 var Y = 85;
 var D = 30;
