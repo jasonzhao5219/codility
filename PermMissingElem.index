@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lession 3 - PermMisssingElem</title>
+</head>
+<body>
+		
+<script type="text/javascript">
+//lession 3 - PermMisssingElem
+
+function solution(A) {
+   
+    var RealSum = 0;
+    if(A.length==0){
+        return 1;
+    }
+    if(A.length == 1){
+        return A[0];
+    }
+
+    for (i=0;i<A.length;i++){
+        RealSum = A[i] + RealSum;
+    }
+    // console.log(RealSum);
+    var AssumpSum = 0;
+    for (i=1;i<=A.length+1;i++){
+        AssumpSum += i;
+    }
+  
+    return AssumpSum - RealSum;
+}
+
+</script>
+
+</body>
+</html>
