@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson 4 -1 FrogRiverOne
+
+</title>
+</head>
+<body>
+		<h5>Find the earliest time when a frog can jump to the other side of a river.</h5>
+<script type="text/javascript">
+//Frog jump cross the reiver
+A = [1,3,5,4,2,5,2,1];
+X = 5;
+function solution(X, A) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    var SetConsctruct = {};
+    var lengthOfObject = 0;
+    var SetArr = [];
+    var resultVal = 0,key;
+    var result = 0;
+    var Max = 0;
+    if(A.length<X ){
+    	return -1;
+    }
+
+
+    
+    //console.log(SetArr);
+    for(i=0;i<A.length;i++){
+    	if (!(A[i] in SetConsctruct)){
+    		//console.log("Now i is : ",i);
+    		SetConsctruct[A[i]] = "exist";
+    		
+    		result = i;
+    	}
+
+
+
+    }
+   	// if (A[result]<X){
+   	// 	return -1;
+   	// }
+    while(key in SetConsctruct){
+    	console.log("may i here?");
+    	
+    	lengthOfObject+=1;
+    	if(lengthOfObject==X){
+    		resultVal = key;
+    	}
+
+    }
+    for(i=0;i<A.length;i++){
+    	if(A[i]==resultVal){
+    		result = i;
+    	}
+    }
+    //frog never jump through river
+    for (var i=0;i<A.length;i++){
+    	if(A[i]>Max){
+    		Max = A[i];
+    	}
+    }
+    if(Max<X){
+    	return -1;
+    }
+
+    return result;
+
+
+}
+
+var hello = solution(X,A);
+// console.log("result is : ",hello) ;
+
+</script>
+
+</body>
+</html>
